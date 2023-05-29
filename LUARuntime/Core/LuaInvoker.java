@@ -8,8 +8,6 @@ import org.luaj.vm2.lib.jse.CoerceJavaToLua;
 
 public class LuaInvoker { 
 
-    //// FUNCTION USED TO INVOKE FUNCTIONS AT LUA SCRIPTS
-    //// RETURN THE OBJECT, IF THERES ONE
     public static Object invoke(String func, Globals globals){
         return invoke(func, null, globals);
     }
