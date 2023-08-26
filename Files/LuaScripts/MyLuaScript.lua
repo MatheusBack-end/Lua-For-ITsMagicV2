@@ -5,7 +5,3 @@ end
 function update() 
 
 end
-
-function disabledUpdate()
-
-end

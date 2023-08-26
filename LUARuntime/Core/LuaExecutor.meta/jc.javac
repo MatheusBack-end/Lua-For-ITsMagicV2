@@ -21,6 +21,7 @@ public class LuaExecutor extends Component {
     public Globals globals = null;
     private LuaValue entire_script = null;
     public ProjectFile file = new ProjectFile(".lua");
+    public File ffile;
     public String luaname = "luaj";
 
     @Override
@@ -71,7 +72,12 @@ public class LuaExecutor extends Component {
                 script_text += FileLoader.loadTextFromFile(module);
             }
             
-            script_text += FileLoader.loadTextFromFile(file);
+            if(ffile == null)
+            {
+                script_text += FileLoader.loadTextFromFile(file);
+            } else {
+                script_text += FileLoader.loadTextFromFile(ffile);
+            }
         } catch(Exception e) {
             Console.log(e);
         }
